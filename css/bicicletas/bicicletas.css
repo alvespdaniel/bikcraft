@@ -1,0 +1,227 @@
+.bike-escolha {
+  padding: 32px;
+}
+
+.bike-escolha p {
+  margin-bottom: 16px;
+}
+
+.nimbus-stark {
+  background: url(../../img/bicicletas/nimbus.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 4px;
+  display: grid;
+}
+
+.magic-might {
+  background: url(../../img/bicicletas/magic.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 4px;
+  display: grid;
+}
+
+.magic-container {
+  background: linear-gradient(to right, #ffffff 20%, #111111 0%);
+  padding: 4px 0;
+}
+
+.nebula-cosmic {
+  background: url(../../img/bicicletas/nebula.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 4px;
+  display: grid;
+}
+
+.bike-imagem:hover a {
+  background-color: var(--cor-principal-1);
+  color: var(--tom-cinza-12);
+  font-weight: bold;
+  padding-right: 24px;
+}
+
+.bike-imagem a {
+  padding: 8px 16px 8px 8px;
+  background-color: var(--tom-cinza-12);
+  border-radius: 4px 0px 0px 4px;
+  place-self: start end;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.bike-item,
+.bike-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bike-container {
+  gap: 40px;
+  margin: 30px auto;
+}
+
+.bike-container img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.bike-item {
+  height: min-content;
+}
+
+.bike-item h2 {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+}
+
+.bike-item h2::before {
+  display: inline-block;
+  content: "";
+  height: 8px;
+  width: 16px;
+  background-color: var(--cor-principal-1);
+}
+
+.bike-item p {
+  margin-bottom: 32px;
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+.bike-item a {
+  place-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.bike-item a::after {
+  display: inline-block;
+  content: url(../../img/icones/seta.svg);
+  margin-left: 8px;
+  transition: 0.3s;
+}
+
+.bike-item a:hover::after {
+  transform: translateX(8px);
+}
+
+.bike-vantagens {
+  display: grid;
+  gap: 8px;
+  grid-column: 1;
+}
+
+.bike-vantagens li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bike-vantagens li:first-child::before {
+  content: url(../../img/icones/eletrica.svg);
+}
+
+.bike-vantagens li:nth-child(2)::before {
+  content: url(../../img/icones/carbono.svg);
+}
+
+.bike-vantagens li:nth-child(3)::before {
+  content: url(../../img/icones/velocidade.svg);
+}
+
+.bike-vantagens li:last-child::before {
+  content: url(../../img/icones/rastreador.svg);
+}
+
+@media (max-width: 1000px) {
+  .bike-container {
+    margin-top: 0px;
+  }
+
+  .bike-escolha > .container {
+    padding: 0px;
+  }
+
+  .bike-escolha > .container p {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+
+  .bike-escolha > .container h1 {
+    font-size: 3rem;
+  }
+
+  .bike-imagem {
+    background-position: right
+  }
+
+  .bike-item {
+    grid-template-columns: 1fr;
+  }
+  
+  .bike-item h2 {
+    margin-bottom: 12px;
+  }
+
+  .bike-item > p {
+    margin-bottom: 20px;
+  }
+
+  .bike-item .botao {
+    grid-area: 4 / 1;
+    justify-self: start;
+  }
+
+  .bike-vantagens {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bike-escolha .container > p,
+  .bike-vantagens,
+  .bike-item a {
+    font-size: 1rem;
+  }
+
+  .bike-escolha .container > h1 {
+    font-size: 2.5rem;
+  }
+
+  .bike-item a {
+    padding: 12px 24px;
+  }
+
+  .bike.container,
+  .magic-container {
+    padding: 16px;
+  }
+
+  .bike-escolha {
+    padding: 32px 16px;
+  }
+
+  .bike-item .botao {
+    justify-self: end;
+  }
+
+  .container.bike-container {
+    padding: 0px;
+  }
+
+  .bike-container {
+    grid-template-columns: 1fr;
+  }
+
+  .bike-imagem {
+    height: 400px;
+    background-size: cover;
+  } 
+
+  .magic-container {
+    background: var(--tom-cinza-11);
+  }
+}
+

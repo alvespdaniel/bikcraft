@@ -1,0 +1,104 @@
+.introducao-background {
+  background: linear-gradient(to top, #ffffff 12%, #000000 0%);
+}
+
+.introducao-item,
+.introducao {
+  display: grid;
+}
+
+.introducao {
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.introducao img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.introducao p {
+  max-width: 40ch;
+}
+
+.introducao-item {
+  align-content: center;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.introducao-item br {
+  display: none;
+}
+
+@media(max-width: 1000px){
+  .introducao-background {
+    background: #000000;
+    padding-bottom: 40px;
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+    padding-top: 32px;
+    gap: 30px;
+  }
+
+  .introducao-item {
+    gap: 24px;
+    padding-bottom: 0px;
+    justify-items: center;
+  }
+
+  .introducao-item h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .introducao-item p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Poppins";
+  }
+  .introducao-item span {
+    font-style: italic;
+  }
+
+  .introducao-item br {
+    display: inherit;
+  }
+
+  .introducao img {
+    max-height: 400px;
+    max-width: 600px;
+    object-position: center;
+  }
+
+  .introducao img,
+  .introducao a {
+    display: none;
+  }
+}
+
+@media(max-width: 800px) {
+  .introducao {
+    padding: 20px 16px;
+  }
+
+  .introducao img {
+    max-height: 300px;
+  }
+
+  .introducao-item h1 {
+    font-size: 2.5rem;
+  }
+
+  .introducao-item p {
+    font-size: 1.25rem;
+  }
+
+  .introducao-item a {
+    padding: 16px;
+    font-size: 1rem;
+  }
+}

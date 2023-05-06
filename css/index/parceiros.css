@@ -1,0 +1,121 @@
+.parceiros-background {
+  padding: 60px 0px;
+}
+
+.parceiros-background h1 {
+  padding-bottom: 60px;
+}
+
+.parceiros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.parceiros-imagem {
+  padding: 64px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.parceiros-imagem:first-child,
+.parceiros-imagem:nth-child(2),
+.parceiros-imagem:nth-child(3),
+.parceiros-imagem:nth-child(4) {
+  border-bottom: 3px solid var(--tom-cinza-3);
+}
+
+.parceiros-imagem + .parceiros-imagem {
+  border-left: 3px solid var(--tom-cinza-3);
+}
+
+.parceiros-imagem:nth-child(5) {
+  border-left: none;
+}
+
+@media (max-width: 1000px) {
+  .parceiros-background h1 {
+    font-size: 3rem;
+    padding-bottom: 30px;
+  }
+
+  .parceiros {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+
+  .parceiros-imagem {
+    padding: 32px;
+    min-width: 240px;
+  }
+
+  .parceiros-imagem:nth-child(odd) {
+    border-left: none;
+  }
+
+  .parceiros-imagem {
+    border-bottom: 3px solid var(--tom-cinza-3);
+  }
+
+  .parceiros-imagem:nth-child(7),
+  .parceiros-imagem:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .parceiros-background h1 {
+    font-size: 2.5rem;
+    padding: 16px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+  }
+
+  .parceiros-background h1 span {
+    display: none;
+  }
+
+  .parceiros {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+  }
+
+  @keyframes animacao {
+    from {left: 0px}
+    to {left: 10px;}
+  }
+
+  .parceiros-background {
+    padding: 30px 0px;
+    padding-bottom: 60px;
+    margin-bottom: 16px;
+  }
+
+  .parceiros-background h1::after {
+    content: url(../../img/icones/setinha.svg);
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    bottom: 10px;
+    animation-name: animacao;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .parceiros-imagem {
+    border-bottom: none !important;
+    padding: 4px;
+  }
+
+  .parceiros-imagem + .parceiros-imagem{
+    border-left: 3px solid var(--tom-cinza-3);
+  }
+}

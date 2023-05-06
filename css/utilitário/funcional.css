@@ -1,0 +1,26 @@
+/* Link sem botão */
+.link {
+  color: var(--cor-principal-1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* botão */
+.botao {
+  padding: 16px 32px;
+  background: linear-gradient(#FFBF00, #F2A50C);
+  color: var(--cor-principal-5);
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: block;
+  width: max-content;
+  height: max-content;
+  transition: 0.2s;
+  font-family: "Poppins";
+}
+
+.botao:hover,
+.botao:focus {
+  background: linear-gradient(#ff9900, #b56c00);
+  color: var(--tom-cinza-12);
+}

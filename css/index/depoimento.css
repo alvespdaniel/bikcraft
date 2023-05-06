@@ -1,0 +1,57 @@
+.depoimento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--cor-principal-1);
+}
+
+.depoimento-imagem img {
+  border-radius: 0px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.depoimento-anajulia {
+  align-self: end;
+  padding: 40px 40px 80px 80px;
+}
+
+.depoimento-anajulia blockquote {
+  margin-bottom: 12px;
+}
+
+.depoimento-anajulia blockquote,
+.depoimento-anajulia p {
+  color: var(--cor-principal-5);
+}
+
+@media (max-width: 1000px) {
+  .depoimento-anajulia {
+    padding: 20px 20px 40px 40px;
+  }
+
+  .depoimento-anajulia blockquote {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .depoimento-anajulia {
+    padding: 16px 16px 32px 32px;
+  }
+
+  .depoimento-anajulia blockquote {
+    font-size: 1.25rem;
+  }
+
+  .depoimento-anajulia p {
+    font-size: 1rem;
+  }
+
+  .depoimento {
+    grid-template-columns: 1fr;
+  }
+
+  .depoimento-anajulia {
+    padding: 16px;
+  }
+}

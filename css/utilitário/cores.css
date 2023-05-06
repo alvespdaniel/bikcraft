@@ -1,0 +1,114 @@
+/* Tons de Cinza :
+   vai do tom-cinza-0 (branco máximo) ao tom-cinza-12 (preto máximo)
+   
+   Cor Principal:
+   #ffbb00 (tom de amarelo) e suas variações*/
+
+:root {
+  --tom-cinza-0: #ffffff;
+  --tom-cinza-1: #f7f7f7;
+  --tom-cinza-2: #ededed;
+  --tom-cinza-3: #dedede;
+  --tom-cinza-4: #cccccc;
+  --tom-cinza-5: #b2b2b2;
+  --tom-cinza-6: #9c9c9c;
+  --tom-cinza-7: #717171;
+  --tom-cinza-8: #595959;
+  --tom-cinza-9: #404040;
+  --tom-cinza-10: #2e2e2e;
+  --tom-cinza-11: #111111;
+  --tom-cinza-12: #000000;
+  --cor-principal-1: #ffbb00;
+  --cor-principal-2: #e4a30b;
+  --cor-principal-3: #A66F00;
+  --cor-principal-4: #664400;
+  --cor-principal-5: #332200;
+}
+
+.tom-cinza-0 {
+  color: var(--tom-cinza-0);
+}
+
+.tom-cinza-1 {
+  color: var(--tom-cinza-1);
+}
+
+.tom-cinza-2 {
+  color: var(--tom-cinza-2);
+}
+
+.tom-cinza-3 {
+  color: var(--tom-cinza-3);
+}
+
+.tom-cinza-4 {
+  color: var(--tom-cinza-4);
+}
+
+.tom-cinza-5 {
+  color: var(--tom-cinza-5);
+}
+
+.tom-cinza-6 {
+  color: var(--tom-cinza-6);
+}
+
+.tom-cinza-7 {
+  color: var(--tom-cinza-7);
+}
+
+.tom-cinza-8 {
+  color: var(--tom-cinza-8);
+}
+
+.tom-cinza-9 {
+  color: var(--tom-cinza-9);
+}
+
+.tom-cinza-10 {
+  color: var(--tom-cinza-10);
+}
+
+.tom-cinza-11 {
+  color: var(--tom-cinza-11);
+}
+
+.tom-cinza-12 {
+  color: var(--tom-cinza-12);
+}
+
+.cor-principal-1 {
+  color: var(--cor-principal-1);
+}
+
+.cor-principal-2 {
+  color: var(--cor-principal-2);
+}
+
+.cor-principal-3 {
+  color: var(--cor-principal-3);
+}
+
+.cor-principal-4 {
+  color: var(--cor-principal-4);
+}
+
+.cor-principal-5 {
+  color: var(--cor-principal-5);
+}
+
+.background-1 {
+  background-color: var(--tom-cinza-12);
+}
+
+.background-2 {
+  background-color: var(--tom-cinza-0);
+}
+
+.background-3 {
+  background-color: var(--tom-cinza-11);
+}
+
+.background-4 {
+  background-color: var(--cor-principal-1);
+}

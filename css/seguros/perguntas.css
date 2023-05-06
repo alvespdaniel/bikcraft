@@ -1,0 +1,100 @@
+.perguntas div {
+  padding: 20px;
+}
+
+.perguntas dl,
+.perguntas h2 {
+  padding: 40px 0px;
+}
+
+.perguntas dl dt {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.perguntas dl div:nth-child(odd) {
+  background-color: var(--tom-cinza-1);
+  border-radius: 4px;
+}
+
+.perguntas dl div {
+  cursor: pointer;
+}
+
+.perguntas dl div dd {
+  display: none;
+}
+
+.perguntas dl div:hover dd {
+  display: initial;
+}
+
+.perguntas dl dt::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-principal-1);
+  margin-right: 8px;
+}
+
+.perguntas dl dt::after {
+  content: url(../../img/icones/seta-abrir.svg);
+  display: inline-block;
+  position: absolute;
+  right: -12px;
+  transition: 0.4s;
+}
+
+.perguntas dl dt:hover:after,
+.perguntas dl dt:active:after {
+  transform: rotate(180deg);
+}
+
+.perguntas dl div:hover dt:before,
+.perguntas dl div:active dt:before {
+  width: 20px;
+}
+
+.perguntas dl dd {
+  margin-left: 20px;
+  max-width: 80ch;
+}
+
+@media(max-width: 1000px) {
+  .perguntas h2 {
+    font-size: 3rem;
+  }
+
+  .perguntas dl,
+  .perguntas h2 {
+    padding: 20px 0px;
+  }
+}
+
+@media(max-width: 800px) {
+  .perguntas h2 {
+    font-size: 2.5rem;
+  }
+
+  .perguntas dl,
+  .perguntas h2 {
+    padding: 10px 0px;
+  }
+
+  .perguntas div {
+    padding: 20px 0px;
+  }
+
+  .perguntas dl dt {
+    font-size: 1rem;
+    align-items: baseline;
+  }
+
+  .perguntas dl dd {
+    font-size: 0.875rem;
+  }
+}

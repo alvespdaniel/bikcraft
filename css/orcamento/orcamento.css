@@ -1,0 +1,214 @@
+form h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  background-color: var(--cor-principal-1);
+  margin-right: 8px;
+}
+
+.formulario-escolha h2 {
+  margin-bottom: 24px;
+  color: var(--tom-cinza-4);
+}
+
+.escolher-orcamento {
+  margin-top: 40px;
+}
+
+.formulario-escolha {
+  padding: 0px;
+}
+
+.formulario-radio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.formulario-radio > * {
+  grid-column: 1 / -1;
+}
+
+.formulario-radio > label {
+  grid-column: initial;
+  cursor: pointer;
+}
+
+.formulario-radio input:checked + label {
+  background: var(--tom-cinza-0);
+  color: var(--tom-cinza-11);
+}
+
+.formulario-radio input:checked + label::before {
+  box-shadow: inset 0 0 0 3px var(--tom-cinza-0), inset 0 0 0 6px var(--tom-cinza-7);
+}
+
+.formulario-radio input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.radio-check {
+  width: auto;
+  margin: 0px;
+  display: inline-block;
+}
+
+.bikcraft-label {
+  margin-right: 20px;
+}
+
+.radio-label {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: var(--tom-cinza-10);
+  color: var(--tom-cinza-4);
+  margin-left: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 2px solid var(--tom-cinza-10);
+}
+
+.radio-label:hover {
+  background-color: var(--tom-cinza-9);
+}
+
+.radio-label:active,
+.formulario-radio input:checked + label {
+  border: 2px solid var(--cor-principal-1);
+  box-shadow: inset 0 0 0 1px var(--tom-cinza-10);
+}
+
+.radio-label span {
+  color: var(--tom-cinza-11);
+  display: none;
+}
+
+.formulario-radio input:checked + .radio-label span {
+  display: block;
+}
+
+.radio-label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--tom-cinza-5);
+  margin-right: 8px;
+}
+
+.escolher-bicicleta {
+  display: grid;
+  gap: 20px;
+}
+
+.escolher-orcamento,
+#bikcraft-checked {
+  display: none !important;
+}
+
+#bikcraft:checked ~ #bikcraft-checked {
+  display: grid !important;
+  grid-column: 1 / -1;
+}
+
+#bikcraft:checked ~ #seguro-checked {
+  display: none;
+  pointer-events: none;
+}
+
+#seguro:checked ~ #seguro-checked {
+  display: grid !important;
+  grid-column: 1 / -1;
+}
+
+#seguro:checked ~ #bikcraft-checked {
+  display: none;
+  pointer-events: none;
+}
+
+#bikcraft-checked {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  background-color: var(--tom-cinza-0);
+  margin-left: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.card-img img {
+  height: 100%;
+  object-fit: cover;
+} 
+
+.card-vantagens {
+  display: grid;
+  align-content: space-around;
+  background-color: var(--tom-cinza-0);
+  margin-left: 0px !important;
+}
+
+.card-vantagens li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-vantagens img {
+  width: 16px;
+}
+
+#nimbus:checked ~ #card-nimbus {
+  display: grid;
+}
+
+#magic:checked ~ #card-magic {
+  display: grid;
+}
+
+#nebula:checked ~ #card-nebula {
+  display: grid;
+}
+
+.entrega-titulo {
+  margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+  .formulario-orcamento {
+    padding: 16px;
+  }
+
+  .formulario-radio {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-label {
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 400px) {  
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-img {
+    grid-row: 1;
+    padding-bottom: 12px;
+  }
+}

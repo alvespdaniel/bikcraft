@@ -1,0 +1,105 @@
+.header,
+.menu-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+}
+
+.menu-header {
+  gap: 40px;
+}
+
+.menu-header a {
+  padding: 16px 0;
+  position: relative;
+}
+
+.menu-header a:focus {
+  color: var(--cor-principal-1);
+  padding: 0px;
+  outline: none;
+}
+
+.menu-header a::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  border-radius: 1px;
+  margin-top: 2px;
+  background-color: var(--cor-principal-1);
+  transition: 0.3s;
+}
+
+.menu-header li a:hover:after {
+  width: 100%;
+}
+
+@media (min-width: 1001px) {
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1000px){
+  .header {
+    padding: 40px 32px;
+  }
+  .menu-header a {
+    color: var(--cor-principal-1);
+    position: relative;
+  }
+
+  .menu-header a::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 1px;
+    margin-top: 2px;
+    background-color: var(--cor-principal-1);
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    justify-content: center;
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .menu-header {
+    gap: 20px;
+  }
+
+  .menu-header a {
+    color: var(--cor-principal-1);
+    position: relative;
+  }
+
+  .menu-header a:active {
+    color: var(--cor-principal-4);
+  }
+
+  .menu-header a::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 1px;
+    margin-top: 2px;
+    background-color: var(--cor-principal-1);
+  }
+}

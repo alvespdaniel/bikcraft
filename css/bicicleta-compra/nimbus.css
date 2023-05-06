@@ -1,0 +1,367 @@
+.bicicleta-preco {
+  margin-bottom: 8px;
+}
+
+.nimbus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  grid-template-rows: auto auto;
+}
+
+.nimbus-intro {
+  grid-row: span 2;
+}
+
+.nimbus-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.nimbus-imagens a {
+  position: relative;
+}
+
+.nimbus-imagens [href^= "./"]:hover::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--cor-principal-1);
+}
+
+.outras-bicicletas {
+  display: flex;
+}
+
+.nimbus-descricao {
+  height: max-content;
+}
+
+.informacoes {
+  grid-column: 2;
+}
+
+.nimbus-imagens,
+.outras-bicicletas {
+  gap: 20px;
+}
+
+.comprar-botao {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 12px;
+  margin: 32px 0px 40px 0px;
+  justify-items: start;
+  align-items: center;
+}
+
+.estoque {
+  grid-column: 2;
+}
+
+.comprar-botao a {
+  padding: 20px 40px;
+  font-size: 1.125rem;
+  height: 100%;
+}
+
+.comprar-botao div {
+  grid-row: span 2;
+}
+
+.comprar-botao p {
+  padding: 2px 8px;
+  background-color: var(--tom-cinza-12);
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+}
+
+.entrega::before {
+  content: url(../../img/icones/entrega.svg);
+}
+
+.estoque::before {
+  content: url(../../img/icones/estoque.svg);
+}
+
+.informacoes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.informacoes-item {
+  display: grid;
+  gap: 8px;
+}
+
+.ficha-lista,
+.informacoes-container {
+  padding: 32px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.ficha-lista {
+  display: grid;
+  gap: 12px;
+}
+
+.ficha-item p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.ficha-lista span {
+  color: inherit;
+}
+
+.ficha-item {
+  height: min-content;
+  position: relative;
+}
+
+.ficha-item::after {
+  content: "";
+  display: inline-block;
+  background-color: #cccccc50;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  margin-top: 4px;
+}
+
+.ficha-item:last-child::after {
+  display: none;
+}
+
+/* Outras opções de bicicletas */
+
+.escolha-outra .escolha {
+  padding: 0px;
+}
+
+.escolha-outra h1 {
+  padding: 32px 0px;
+}
+
+/* Seção do seguro */
+
+.seguro-secao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 100px;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(to top, #000000 20%, #111111 0%);
+  box-shadow: inset 0px 180px 0px #fff;
+}
+
+.seguro-secao-item {
+  display: grid;
+  height: max-content;
+}
+
+.seguro-secao-item h2 {
+  margin-bottom: 32px;
+}
+
+.seguro-secao-item p {
+  margin-bottom: 20px;
+  max-width: 40ch;
+}
+
+.seguro-secao-item a {
+  padding: 20px 32px;
+  font-size: 1.125rem;
+}
+
+.seguro-secao img {
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.bicicletas-footer {
+  padding-top: 0px !important;
+}
+
+/* Responsivo do Nimbus */
+
+@media (max-width: 1000px) {
+  .nimbus .container > h1 {
+    font-size: 3rem;
+  }
+
+  .nimbus .container > p {
+    font-size: 1.5rem;
+  }
+
+  .nimbus-grid {
+    padding: 0px 32px;
+    padding-bottom: 32px;
+  }
+
+  .nimbus-descricao {
+    align-items: end;
+  }
+
+  .nimbus-descricao a {
+    font-size: 1rem;
+    padding: 16px 32px;
+  }
+
+  .nimbus-descricao > p {
+    font-size: 1.25rem;
+  }
+
+  .comprar-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0px;
+    margin-top: 24px;
+  }
+
+  .comprar-botao p {
+    font-size: 0.625rem;
+    align-items: center;
+  }
+
+  .nimbus-descricao > p {
+    font-size: 1.25rem;
+  }
+
+  .informacoes {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .outras-bicicletas {
+    display: none;
+  }
+
+  .nimbus-foto img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .nimbus > .container {
+    padding: 16px;
+  }
+
+  .nimbus .container > h1 {
+    font-size: 2.5rem;
+  }
+
+  .nimbus .container > p {
+    font-size: 1.25rem; 
+  }
+
+  .nimbus-foto img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .nimbus-grid {
+    gap: 32px 20px;
+    grid-template-columns: 1fr;
+    padding: 0px 16px;
+    padding-bottom: 32px;
+  }
+
+  .nimbus-descricao > p {
+    font-size: 1.125rem;
+  }
+
+  .informacoes {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .informacoes-container,
+  .ficha-lista {
+    align-items: baseline;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .informacoes-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Responsivo do restante da página */ 
+
+@media (max-width: 1000px) {
+  .escolha-outra h1,
+  .seguro-secao-item h2 {
+    font-size: 3rem;
+  }
+
+  .seguro-secao {
+    padding: 32px;
+    background: var(--tom-cinza-11);
+    box-shadow: none;
+  }
+
+  .bicicletas-footer {
+    padding-top: 32px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .escolha-outra h1,
+  .seguro-secao-item h2 {
+    font-size: 2.5rem;
+  }
+
+  .escolha-outra h1 {
+    padding-top: 0px;
+  }
+
+  .escolha h2 {
+    font-size: 1.25rem;
+  }
+
+  .escolha-outra {
+    padding: 32px 16px;
+  }
+
+  .seguro-secao {
+    padding: 32px 16px;
+    grid-template-columns: 1fr;
+    background: var(--tom-cinza-11);
+    box-shadow: none;
+  }
+
+  .seguro-secao img {
+    display: none;
+  }
+
+  .seguro-secao p {
+    font-size: 1.125rem;
+  }
+
+  .seguro-secao a {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+
+  .bicicletas-footer {
+    padding-top: 32px !important;
+  }
+}

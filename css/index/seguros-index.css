@@ -1,0 +1,136 @@
+.seguros-index-background {
+  background-color: var(--tom-cinza-11);
+  padding-top: 32px;
+  padding-bottom: 60px;
+}
+
+.seguros-index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.seguros-index-item:first-of-type:hover {
+  border: 3px solid var(--tom-cinza-6);
+}
+
+.seguros-index-item:last-of-type:hover {
+  border: 3px solid var(--cor-principal-1);
+}
+
+.seguros-index h1 {
+  margin-bottom: 60px;
+  grid-column: 1 / -1;
+}
+
+.seguros-index-item {
+  background-color: var(--tom-cinza-12);
+  color: var(--tom-cinza-0);
+  padding: 32px 64px;
+  border: 3px solid var(--tom-cinza-12);
+  transition: 0.3s;
+}
+
+.seguros-index-item h2 {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.seguros-index-item p {
+  display: grid;
+  justify-items: end;
+}
+
+.seguros-index-item span {
+  text-transform: lowercase;
+}
+
+.seguros-index-item ul {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.seguros-index-item li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seguros-index-item li::before {
+  content: url(../../img/icones/lista.svg);
+}
+
+.seguros-index-item a {
+  display: block;
+  width: max-content;
+  background: inherit;
+  color: inherit;
+  color: var(--tom-cinza-0);
+  border: 2px solid var(--tom-cinza-0);
+  padding: 16px 32px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.seguros-index-item .prata:hover {
+  background-color: var(--tom-cinza-6);
+  color: var(--tom-cinza-12);
+  border-color: var(--tom-cinza-6);
+}
+
+.seguros-index-item .ouro:hover {
+  background-color: var(--cor-principal-1);
+  color: var(--tom-cinza-12);
+  border-color: var(--cor-principal-1);
+}
+
+@media (max-width: 1000px) {
+  .seguros-index h1 {
+    font-size: 3rem;
+  }
+
+  .seguros-index-item h2 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .seguros-index-item p {
+    justify-items: start;
+  }
+}
+
+@media (max-width: 800px) {
+  .seguros-index h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+    padding-top: 32px;
+  }
+
+  .seguros-index {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .seguros-index-item {
+    padding: 32px;
+  }
+
+  .seguros-index-item:last-of-type {
+    grid-row: 2;
+  }
+
+  .seguros-index-item li,
+  .seguros-index-item a {
+    font-size: 1rem;
+  }
+
+  .seguros-index-item a {
+    padding: 10px 20px;
+    letter-spacing: 0.8px;
+  }
+}
