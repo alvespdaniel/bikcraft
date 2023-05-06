@@ -14,7 +14,7 @@
 
       <nav aria-label="primaria">
         <ul class="menu-header tom-cinza-0">
-          <li><a href="/bicicletas.html" class="font-1-m">Bicicletas</a></li>
+          <li><a href="./bicicletas.html" class="font-1-m">Bicicletas</a></li>
           <li><a href="./seguros.html" class="font-1-m">Seguros</a></li>
           <li><a href="./contato.html" class="font-1-m">Contato</a></li>
         </ul>
